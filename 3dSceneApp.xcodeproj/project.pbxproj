@@ -14,6 +14,7 @@
 		B7BCD4292B9085CA00E37325 /* _dSceneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BCD4282B9085CA00E37325 /* _dSceneAppTests.swift */; };
 		B7BCD4332B9085CA00E37325 /* _dSceneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BCD4322B9085CA00E37325 /* _dSceneAppUITests.swift */; };
 		B7BCD4352B9085CA00E37325 /* _dSceneAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BCD4342B9085CA00E37325 /* _dSceneAppUITestsLaunchTests.swift */; };
+		B7C7DE992BCE78BC00F92061 /* bulb.scn in Resources */ = {isa = PBXBuildFile; fileRef = B7C7DE982BCE78BC00F92061 /* bulb.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		B7BCD42E2B9085CA00E37325 /* 3dSceneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3dSceneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BCD4322B9085CA00E37325 /* _dSceneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _dSceneAppUITests.swift; sourceTree = "<group>"; };
 		B7BCD4342B9085CA00E37325 /* _dSceneAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _dSceneAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7BCD4422B90872700E37325 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/ARKit.framework; sourceTree = DEVELOPER_DIR; };
+		B7C7DE982BCE78BC00F92061 /* bulb.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bulb.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 				B7BCD4272B9085CA00E37325 /* 3dSceneAppTests */,
 				B7BCD4312B9085CA00E37325 /* 3dSceneAppUITests */,
 				B7BCD4142B9085C800E37325 /* Products */,
+				B7BCD4412B90872700E37325 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +99,10 @@
 		B7BCD4152B9085C800E37325 /* 3dSceneApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7C7DE9A2BCE820A00F92061 /* Resources */,
+				B7C7DE982BCE78BC00F92061 /* bulb.scn */,
 				B7BCD4162B9085C800E37325 /* _dSceneAppApp.swift */,
 				B7BCD4182B9085C800E37325 /* ContentView.swift */,
-				B7BCD41A2B9085CA00E37325 /* Assets.xcassets */,
 				B7BCD41C2B9085CA00E37325 /* _dSceneApp.entitlements */,
 				B7BCD41D2B9085CA00E37325 /* Preview Content */,
 			);
@@ -127,6 +132,22 @@
 				B7BCD4342B9085CA00E37325 /* _dSceneAppUITestsLaunchTests.swift */,
 			);
 			path = 3dSceneAppUITests;
+			sourceTree = "<group>";
+		};
+		B7BCD4412B90872700E37325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7BCD4422B90872700E37325 /* ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7C7DE9A2BCE820A00F92061 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7BCD41A2B9085CA00E37325 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +256,7 @@
 			files = (
 				B7BCD41F2B9085CA00E37325 /* Preview Assets.xcassets in Resources */,
 				B7BCD41B2B9085CA00E37325 /* Assets.xcassets in Resources */,
+				B7C7DE992BCE78BC00F92061 /* bulb.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +446,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = aaaa;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -434,12 +457,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paste89.3dSceneApp.-dSceneApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paste89.-dSceneApp.3dSceneApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -462,6 +485,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = aaaa;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -472,12 +496,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paste89.3dSceneApp.-dSceneApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paste89.-dSceneApp.3dSceneApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
